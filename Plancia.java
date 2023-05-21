@@ -12,11 +12,11 @@ public class Plancia {
 		mazzo = new Mazzo();
 		bianco = new Giocatore(this.mazzo);
 		nero  = new Giocatore(this.mazzo);
+		generateBriscola();
 	}
 	
-	public Carta.Seme generateBriscola(){
+	public void generateBriscola(){
 		briscola = mazzo.generateBriscola();
-		return briscola.getSeme();
 	}
 	/**
 	 * This method resolves a single turn of the game.

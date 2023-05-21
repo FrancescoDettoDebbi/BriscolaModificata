@@ -88,7 +88,8 @@ public class Giocatore {
 				scanner.next();
 			}
 			input = scanner.nextInt();
-		}while(input < 0 || input > 2);
+		}while(input < 0 || input > getMano().size() - 1);
+		setSelezione(input);
 	}
 
 }
