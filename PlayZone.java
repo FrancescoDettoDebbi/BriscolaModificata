@@ -27,7 +27,7 @@ public class PlayZone {
 	 * @param g2
 	 * @param briscola
 	 */
-	public void resolvePlayZone(Giocatore g1, Giocatore g2, Carta.Seme briscola) {
+	public boolean resolvePlayZone(Giocatore g1, Giocatore g2, Carta.Seme briscola) {
 		List<Carta> presa = new ArrayList<>();
 		playZone.add(g1.play());
 		playZone.add(g2.play());
@@ -38,7 +38,9 @@ public class PlayZone {
 		presa.add(playZone.remove(0));
 		if (presa.get(0).isWinning(presa.get(1), briscola)) {
 			g1.getPila().prendi(presa);
+			return true;
 		} else g2.getPila().prendi(presa);
+		return false;
 	}
 
 }
