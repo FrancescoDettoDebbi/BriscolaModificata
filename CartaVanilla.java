@@ -1,74 +1,86 @@
 package briscolaModificata;
 
 /**
+ * This class represents a vanilla card, which is a simple card used for testing purposes.
+ * It extends the abstract class {@link Carta} and inherits its properties and methods.
+ * The vanilla card contains a value and a suit.
+ * 
  * <p>
- * This class is supposed to be helpful in doing tests.<br>
- * This is a concrete class that implements placeholder implementation of all the abstract methods.<br>
- * While not all the 40 card classes will be written, it is possible to put vanilla cards 
- * in deck to perform tests.<br>
- * The card simply contains a Value and a suit.
+ * Example usage:
+ * <pre>{@code
+ * CartaVanilla carta = new CartaVanilla();
+ * carta.inMano();
+ * System.out.println(carta);
+ * }</pre>
+ * Output: "inMano"
  * </p>
+ * 
+ * <p>
+ * Example usage with custom value and suit:
+ * <pre>{@code
+ * Carta.Seme seme = Carta.Seme.COPPE;
+ * Carta.Valore valore = Carta.Valore.ASSO;
+ * CartaVanilla carta = new CartaVanilla(seme, valore);
+ * carta.inGioco();
+ * System.out.println(carta);
+ * }</pre>
+ * Output: "inGioco"
+ * </p>
+ * 
+ * @see Carta
  * @author Francesco Debbi
  */
 public class CartaVanilla extends Carta {
-	
-	/**
-	 * <p>
-	 * Default constructor will be used in actual Card classes: 
-	 * That is because the Quattro di Spade Class will always have a value of 4 and a suit of Spade, 
-	 * so there is no need to list suit and value in the constructor. 
-	 * </p>
-	 */
-	public CartaVanilla() {
-		
-	}
-	
-	/**
-	 * <p>
-	 * This constructor creates a VanillaCard object with value and suit given.
-	 * </p>
-	 * @param s {Carta.Seme}
-	 * @param v {Carta.Valore}
-	 */
-	public CartaVanilla(Carta.Seme s, Carta.Valore v){
-		setValore(v);
-		setSeme(s);
-	}
-	
-	/**
-	 * <p>
-	 * This is a placeholder.
-	 * </p>
-	 */
-	public void inMano() {
-		System.out.println("inMano");
-	}
-
-	/**
-	 * <p>
-	 * This is a placeholder.
-	 * </p>
-	 */
-	public void inMazzo() {
-		System.out.println("inMzzo");
-	}
-
-	/**
-	 * <p>
-	 * This is a placeholder.
-	 * </p>
-	 */
-	public void inGioco() {
-		System.out.println("inGioco");
-	}
-
-	/**
-	 * <p>
-	 * This is a placeholder.
-	 * </p>
-	 */
-	public void inScarti() {
-		System.out.println("inScarti");
-	}
-
+    
+    /**
+     * Default constructor for creating a CartaVanilla object.
+     * This constructor is used in actual card classes.
+     * The specific card classes will have predefined values for suit and value.
+     */
+    public CartaVanilla() {
+        
+    }
+    
+    /**
+     * Constructor for creating a CartaVanilla object with the specified suit and value.
+     * 
+     * @param s The suit of the card.
+     * @param v The value of the card.
+     */
+    public CartaVanilla(Carta.Seme s, Carta.Valore v) {
+        setValore(v);
+        setSeme(s);
+    }
+    
+    /**
+     * Placeholder implementation for the "inMano" method.
+     * Prints "inMano" to the console.
+     */
+    public void inMano() {
+        System.out.println("inMano");
+    }
+    
+    /**
+     * Placeholder implementation for the "inMazzo" method.
+     * Prints "inMazzo" to the console.
+     */
+    public void inMazzo() {
+        System.out.println("inMazzo");
+    }
+    
+    /**
+     * Placeholder implementation for the "inGioco" method.
+     * Prints "inGioco" to the console.
+     */
+    public void inGioco() {
+        System.out.println("inGioco");
+    }
+    
+    /**
+     * Placeholder implementation for the "inScarti" method.
+     * Prints "inScarti" to the console.
+     */
+    public void inScarti() {
+        System.out.println("inScarti");
+    }
 }
