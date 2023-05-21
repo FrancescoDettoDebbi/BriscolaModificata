@@ -7,10 +7,12 @@ public class SetteDiBastoni extends CartaVanilla{
 		setValore(Carta.Valore.SETTE);
 	}
 	
+	@Override
 	public void inGioco() {
 		System.out.print("La briscola è BASTONI!");
 	}
 
+	@Override
 	public boolean isWinning(Carta altraCarta, Carta.Seme briscola) {
 		if (getSeme().equals(Carta.Seme.BASTONI) && !(altraCarta.getSeme().equals(Carta.Seme.BASTONI))) {
 			return true;
