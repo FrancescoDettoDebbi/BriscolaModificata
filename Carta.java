@@ -195,7 +195,9 @@ public abstract class Carta {
         } else if (altraCarta.getSeme().equals(briscola) && !(getSeme().equals(briscola))) {
             return false;
         } else {
+            if (getSeme().equals(altraCarta.getSeme()))
             return getValore().getIndiceNumerico() > altraCarta.getValore().getIndiceNumerico();
+            else return true;
         }
     }
     
